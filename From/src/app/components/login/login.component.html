@@ -1,59 +1,10 @@
-<!-- <form [formGroup]="loginForm" >
 
-    <div class="field">
-      <label for="email">Email</label>
-      <input
-        type="text"
-        pInputText
-        formControlName="email"
-        class="w-full"
-        name="email"
-        placeholder="Type your email"
-      />
-     <small *ngIf="email.invalid &&(email.dirty || email.touched)" class="block p-error">
-      <div *ngIf="email.errors?.['required']">Email is required </div>
-      <div *ngIf="email.errors?.['email']">Email should be valid </div>
-    </small>
-    </div>
-    <div class="field">
-      <label for="password">Password</label>
-      <input
-        type="password"
-        pInputText
-        formControlName="password"
-        class="w-full"
-        name="password"
-        placeholder="Type your password"
-      />
-      <small *ngIf="password.invalid &&(password.dirty || password.touched)" class="block p-error">
-        <div *ngIf="password.errors?.['required']">password is required </div>
-      </small>
-    </div>
-    <div class="mb-3">
-      <a routerLink="/forgotpassword"> Forgot Password?</a>
-    </div>
-    <button
-      label="SIGN IN"
-      styleClass="w-full"
-     [disabled]="loginForm.invalid"
-      type="submit"
-    ></button>
-    <div class="mt-2">Not a member? <a routerLink="/register">Register</a></div>
-
-</form>
-
- -->
-
-
-
-
-
-
-  <div class="d-flex justify-content-center">
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-      <form >
-        <div class="mb-3">
+<div class="d-flex justify-content-center  my-5">
+    <div class="card " style="width: 18rem;">
+      <div class="card-body  ">
+      <form [formGroup]="loginForm ">
+        <h2 class="mb-3">Login</h2>
+        <div class="mb-3 ">
           <label for="email" class="form-label">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
           formControlName="email"
@@ -64,6 +15,7 @@
             <div *ngIf="email.errors?.['email']">Email should be valid </div>
           </small>
         </div>
+        
   
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
