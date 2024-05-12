@@ -18,6 +18,7 @@ import { MenubarComponent } from './components/menubar/menubar.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-info.component';
+import { CommonFaqComponent } from './components/common-faq/common-faq.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-in
     LogoutComponent,
     FooterComponent,
     PortfolioInfoComponent,
+    CommonFaqComponent,
   ],
   imports: [
     BrowserModule,

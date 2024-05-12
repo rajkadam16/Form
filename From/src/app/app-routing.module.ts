@@ -9,46 +9,51 @@ import { RequestInfoComponent } from './components/request-info/request-info.com
 import { LogoutComponent } from './components/logout/logout.component';
 import { Component } from '@angular/core';
 import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-info.component';
+import { CommonFaqComponent } from './components/common-faq/common-faq.component';
 
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
   },
   {
     path: 'forgotpassword',
     component: ForgotPasswordComponent,
   },
   {
-    path:'requestInfo',
-    component:RequestInfoComponent
+    path: 'requestInfo',
+    component: RequestInfoComponent,
   },
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [authGuard]
   },
-{
-  path:"logout",
-  component:LogoutComponent
-},
-{
-  path: 'portfolioinfo',
-  component: PortfolioInfoComponent
-
-},
+  {
+    path: 'logout',
+    component: LogoutComponent,
+  },
+  {
+    path: 'commonfaq',
+    component: CommonFaqComponent,
+  },
+  {
+    path: 'portfolioinfo',
+    component: PortfolioInfoComponent,
+  },
 
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
-  }
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
