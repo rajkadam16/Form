@@ -5,16 +5,19 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
-import { CardModule } from 'primeng/card';
-import { InputTextModule } from 'primeng/inputtext';
+
 import { ReactiveFormsModule } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
+
 import { HttpClientModule } from '@angular/common/http';
-import { ToastModule } from 'primeng/toast';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MessageService } from 'primeng/api';
+
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { RequestInfoComponent } from './components/request-info/request-info.component';
+import { MenubarComponent } from './components/menubar/menubar.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-info.component';
 
 @NgModule({
   declarations: [
@@ -23,20 +26,24 @@ import { RequestInfoComponent } from './components/request-info/request-info.com
     RegisterComponent,
     HomeComponent,
     ForgotPasswordComponent,
-    RequestInfoComponent
+    RequestInfoComponent,
+    MenubarComponent,
+    LogoutComponent,
+    FooterComponent,
+    PortfolioInfoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CardModule,
-    InputTextModule,
     ReactiveFormsModule,
-    ButtonModule,
+    AppRoutingModule,
+
+   
+   
     HttpClientModule,
-    ToastModule,
+
     BrowserAnimationsModule
   ],
-  providers: [MessageService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

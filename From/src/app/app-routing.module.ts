@@ -6,6 +6,9 @@ import { HomeComponent } from './components/home/home.component';
 import { authGuard } from './guards/auth.guard';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { RequestInfoComponent } from './components/request-info/request-info.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { Component } from '@angular/core';
+import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-info.component';
 
 const routes: Routes = [
   {
@@ -29,7 +32,16 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [authGuard]
   },
- 
+{
+  path:"logout",
+  component:LogoutComponent
+},
+{
+  path: 'portfolioinfo',
+  component: PortfolioInfoComponent
+
+},
+
   {
     path: '', redirectTo: 'home', pathMatch: 'full'
   }

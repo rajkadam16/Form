@@ -1,5 +1,5 @@
 <form [formGroup]="registerFrom" (ngSubmit)="submitDetails()">
-  <p-card header="Register" [style]="{ width: '360px' }">
+ 
     <div class="field">
       <label for="fullName">Full Name</label>
       <input
@@ -60,12 +60,12 @@
         <div *ngIf="confirmPassword.errors?.['required']">Confirm the Password </div>
       </small>
     </div>
-    <p-button
+    <button
       label="Register"
       styleClass="w-full"
       [disabled]="registerFrom.invalid"
       type="submit"
-    ></p-button>
+    ></button>
     <div class="mt-2">Already a member? <a routerLink="/login">Login</a></div>
-  </p-card>
+
 </form>
