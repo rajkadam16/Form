@@ -1,72 +1,69 @@
-<div class="d-flex justify-content-end  my-5">
-    <div class="card " style="width: 18rem;">
-      <div class="card-body  ">
+<div class="d-flex justify-content-end my-5 px-3">
+  <div class="card" style="width: 20rem">
+    <div class="card-body">
       <form [formGroup]="requestFrom">
         <h2 class="mb-3">Request Form</h2>
-        <div class="mb-3 ">
+        <div class="mb-3">
           <label for="fullName  " class="form-label">Full Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-          formControlName="fullName"
-          name="text"
-          placeholder="Enter your fullname">
-          <small *ngIf="fullName.invalid &&(fullName.dirty || fullName.touched)" class="block p-error">
-            <div *ngIf="fullName.errors?.['required']">Name is required </div>
-            <div *ngIf="fullName.errors?.['pattern']">Enter a valid Name </div>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="fullName" name="fullName" placeholder="Enter your fullname" />
+          <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="">
+            <div *ngIf="fullName.errors?.['required']">Name is required</div>
+            <div *ngIf="fullName.errors?.['pattern']">Enter a valid Name</div>
           </small>
         </div>
-        <div class="mb-3 ">
+        <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-          formControlName="email"
-          name="email"
-          placeholder="Type your email">
-          <small *ngIf="email.invalid &&(email.dirty || email.touched)" class="block p-error">
-            <div *ngIf="email.errors?.['required']">Email is required </div>
-            <div *ngIf="email.errors?.['email']">Email should be valid </div>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="email" name="email" placeholder="Type your email" />
+          <small *ngIf="email.invalid && (email.dirty || email.touched)" class="">
+            <div *ngIf="email.errors?.['required']">Email is required</div>
+            <div *ngIf="email.errors?.['email']">Email should be valid</div>
           </small>
         </div>
 
-        <div class="mb-3 ">
+        <div class="mb-3">
           <label for="Phonenumber" class="form-label">Phone Number</label>
-          <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-          formControlName="Phonenumber"
-          name="Phonenumber"
-          placeholder="Enter phone number">
+          <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="phoneNumber" name="phoneNumber" placeholder="Enter phone number" />
+            <small *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" class="">
+              <div *ngIf="phoneNumber.errors?.['required']">Phone Number is required</div>
+              <div *ngIf="phoneNumber.errors?.['pattern']">Enter a valid Phone Number</div>
+            </small>
         </div>
 
-        
-        <div class="mb-3 ">
+        <div class="mb-3">
           <label for="state  " class="form-label">State</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-          formControlName="state"
-          name="text"
-          placeholder="Enter your state"> 
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="state" name="text" placeholder="Enter your state" />
+            <small *ngIf="state.invalid &&(state.dirty || state.touched)" class="">
+              <div *ngIf="state.errors?.['required']">Enter your state </div>
+            </small>
         </div>
 
-        <div class="mb-3 ">
+        <div class="mb-3">
           <label for="city  " class="form-label">City</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-          formControlName="city"
-          name="text"
-          placeholder="Enter your city">
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="city" name="text" placeholder="Enter your city" />
+            <small *ngIf="city.invalid &&(city.dirty || city.touched)" class="">
+              <div *ngIf="city.errors?.['required']">Enter your City </div>
+            </small>
         </div>
 
-        <div class="mb-3 ">
+        <div class="mb-3">
           <label for="CRD  " class="form-label">CRD</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-          formControlName="CRD"
-          name="text"
-          placeholder="CRD (optional)"> 
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="CRD" name="text" placeholder="CRD (optional)" />
         </div>
-        
+
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-
-        <button type="submit" class="btn btn-primary"  label="SIGN IN" [disabled]="requestFrom.invalid">Submit</button>
-
-      
+        <button type="submit" class="btn btn-primary" label="SIGN IN" [disabled]="requestFrom.invalid">
+          Submit
+        </button>
       </form>
-      </div>
-      </div></div>
+    </div>
+  </div>
+</div>

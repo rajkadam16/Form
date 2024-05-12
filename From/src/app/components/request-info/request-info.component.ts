@@ -7,41 +7,36 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./request-info.component.css']
 })
 export class RequestInfoComponent {
-
-  submitRequestInfo() {
-    throw new Error('Method not implemented.');
-    }
-
   requestFrom =this.fb.group({
-    fullName:['',[Validators.required,Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
-    email:['',[Validators.required,Validators.email]],
-    address:['',Validators.required],
-    city:['',Validators.required],
-    phoneNumber:['',Validators.required,Validators.pattern("[0-9 ]{12}")],
-    CRD:[]
-
-    
-
+  fullName:['',[Validators.required,Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
+  email:['',[Validators.required,Validators.email]],
+  phoneNumber:['',Validators.required,Validators.pattern("[0-9 ]{12}")],
+  address:['',Validators.required],
+  city:['',Validators.required],
+  state:['',Validators.required],
+  CRD:[]
   })
-  rquestFrom: any;
   constructor(private fb: FormBuilder){
    }
    get fullName() {
-    return this.rquestFrom.controls['fullName'];
+    return this.requestFrom.controls['fullName'];
   }
   get address(){
-    return this.rquestFrom.controls['address'];
+    return this.requestFrom.controls['address'];
   }
   get city(){
-    return this.rquestFrom.controls['city'];
+    return this.requestFrom.controls['city'];
   }
   get email(){
-    return this.rquestFrom.controls['email'];
+    return this.requestFrom.controls['email'];
+  }
+  get state(){
+    return this.requestFrom.controls['state'];
   }
   get phoneNumber(){
-    return this.rquestFrom.controls['phoneNumber']
+    return this.requestFrom.controls['phoneNumber']
   }
   get CRD(){
-    return this.rquestFrom.controls['CRD']
+    return this.requestFrom.controls['CRD']
   }
 }
