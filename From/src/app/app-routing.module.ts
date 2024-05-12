@@ -5,6 +5,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { authGuard } from './guards/auth.guard';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { RequestInfoComponent } from './components/request-info/request-info.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'forgotpassword',
     component: ForgotPasswordComponent,
+  },
+  {
+    path:'requestInfo',
+    component:RequestInfoComponent
   },
   {
     path: 'home',
