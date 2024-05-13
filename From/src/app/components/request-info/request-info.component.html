@@ -15,7 +15,7 @@
         <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            formControlName="email" name="email" placeholder="Type your email" />
+            formControlName="email" name="email" placeholder="Enter your email" />
           <small *ngIf="email.invalid && (email.dirty || email.touched)" class="">
             <div *ngIf="email.errors?.['required']">Email is required</div>
             <div *ngIf="email.errors?.['email']">Email should be valid</div>
@@ -24,7 +24,7 @@
 
         <div class="mb-3">
           <label for="Phonenumber" class="form-label">Phone Number</label>
-          <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          <input type="tel"  [(ngModel)]="inputVal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             formControlName="phoneNumber" name="phoneNumber" placeholder="Enter phone number" />
             <small *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" class="">
               <div *ngIf="phoneNumber.errors?.['required']">Phone Number is required</div>
@@ -32,23 +32,28 @@
             </small>
         </div>
 
-        <div class="mb-3">
-          <label for="state  " class="form-label">State</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            formControlName="state" name="text" placeholder="Enter your state" />
-            <small *ngIf="state.invalid &&(state.dirty || state.touched)" class="">
-              <div *ngIf="state.errors?.['required']">Enter your state </div>
-            </small>
+
+
+
+        <div class="select_option">
+          <label for="state  " class="form-label ">State</label>
+          <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
+              <option selected> New York</option>
+              <option selected>New Jersey</option>
+              <option selected>Washington </option>
+              <option selected>Texas</option>
+          </select>
+          <label for="city  " class="form-label m">City</label>
+          <select class="form-select city" aria-label="Default select example">
+              <option selected>Select City</option>
+              <option selected>Select City</option>
+              <option selected>Select City</option>
+              <option selected>Select City</option>
+          </select>
         </div>
 
-        <div class="mb-3">
-          <label for="city  " class="form-label">City</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            formControlName="city" name="text" placeholder="Enter your city" />
-            <small *ngIf="city.invalid &&(city.dirty || city.touched)" class="">
-              <div *ngIf="city.errors?.['required']">Enter your City </div>
-            </small>
-        </div>
+
+
 
         <div class="mb-3">
           <label for="CRD  " class="form-label">CRD</label>
@@ -63,7 +68,22 @@
         <button type="submit" class="btn btn-primary" label="SIGN IN" [disabled]="requestFrom.invalid">
           Submit
         </button>
+        
       </form>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+<small *ngIf="city.invalid &&(city.dirty || city.touched)" class="">
+  <div *ngIf="city.errors?.['required']">Enter your City </div>
+</small>
+
+
+<small *ngIf="state.invalid &&(state.dirty || state.touched)" class="">
+  <div *ngIf="state.errors?.['required']">Enter your state </div>
+</small>

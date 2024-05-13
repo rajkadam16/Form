@@ -6,7 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -19,6 +19,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-info.component';
 import { CommonFaqComponent } from './components/common-faq/common-faq.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,15 @@ import { CommonFaqComponent } from './components/common-faq/common-faq.component
     FooterComponent,
     PortfolioInfoComponent,
     CommonFaqComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-
+CommonModule,
+FormsModule,
    
    
     HttpClientModule,

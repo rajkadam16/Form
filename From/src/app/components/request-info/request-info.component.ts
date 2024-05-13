@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
+
+
 @Component({
   selector: 'app-request-info',
   templateUrl: './request-info.component.html',
   styleUrls: ['./request-info.component.css']
 })
 export class RequestInfoComponent {
+  inputVal ="+1-"
   requestFrom =this.fb.group({
   fullName:['',[Validators.required,Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
   email:['',[Validators.required,Validators.email]],
@@ -14,8 +17,9 @@ export class RequestInfoComponent {
   address:['',Validators.required],
   city:['',Validators.required],
   state:['',Validators.required],
-  CRD:[]
+  CRD:[],
   })
+
   constructor(private fb: FormBuilder){
    }
    get fullName() {
