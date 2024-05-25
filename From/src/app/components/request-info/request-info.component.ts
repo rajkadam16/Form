@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
-
-
 @Component({
   selector: 'app-request-info',
   templateUrl: './request-info.component.html',

@@ -10,6 +10,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { Component } from '@angular/core';
 import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-info.component';
 import { CommonFaqComponent } from './components/common-faq/common-faq.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,7 @@ const routes: Routes = [
     component: RequestInfoComponent,
   },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
   },
   {
@@ -44,10 +45,11 @@ const routes: Routes = [
     path: 'portfolioinfo',
     component: PortfolioInfoComponent,
   },
-
+  { path:"**",
+  component:PageNotFoundComponent },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full',
   },
 ];

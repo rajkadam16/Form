@@ -6,25 +6,26 @@ import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required]
-  })
-
+    password: ['', Validators.required],
+  });
+  login() {
+    console.log(this.loginForm.value);
+  }
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router,
-
-  ) { }
+    private router: Router
+  ) {}
 
   get email() {
     return this.loginForm.controls['email'];
   }
-  get password() { return this.loginForm.controls['password']; }
-
-
+  get password() {
+    return this.loginForm.controls['password'];
+  }
 }

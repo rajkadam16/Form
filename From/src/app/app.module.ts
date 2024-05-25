@@ -5,13 +5,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { RequestInfoComponent } from './components/request-info/request-info.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
@@ -20,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-info.component';
 import { CommonFaqComponent } from './components/common-faq/common-faq.component';
 import { CommonModule } from '@angular/common';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,22 +31,18 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     PortfolioInfoComponent,
     CommonFaqComponent,
-    
-    
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-CommonModule,
-FormsModule,
-   
-   
+    CommonModule,
+    FormsModule,
     HttpClientModule,
-
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
 
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

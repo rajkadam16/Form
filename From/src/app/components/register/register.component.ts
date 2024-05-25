@@ -14,11 +14,15 @@ throw new Error('Method not implemented.');
   registerFrom =this.fb.group({
     fullName:['',[Validators.required,Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
     email:['',[Validators.required,Validators.email]],
-    password:['',Validators.required],
-    confirmPassword:['',Validators.required],
-    phonenumber: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]]  
+    password:['',[Validators.required]],
+    confirmPassword:['',[Validators.required]],
+    phonenumber: ['', [Validators.required]]
 
   })
+
+  registerForm() {
+    console.log(this.registerFrom.value);
+  }
   constructor(private fb: FormBuilder){
    }
    get fullName() {
@@ -27,7 +31,7 @@ throw new Error('Method not implemented.');
   get email(){
     return this.registerFrom.controls['email'];
   }
-  get Phonenumber(){
+  get phonenumber(){
     return this.registerFrom.controls['phonenumber'];
   }
   get password(){

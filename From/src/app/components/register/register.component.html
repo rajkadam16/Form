@@ -6,7 +6,7 @@
         <div class="mb-3 ">
           <label for="fullName  " class="form-label">Full Name</label>
           <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            formControlName="fullName" name="text" placeholder="Enter your fullName">
+            formControlName="fullName" name="Text" placeholder="Enter your fullName">
           <small *ngIf="fullName.invalid &&(fullName.dirty || fullName.touched)" class="">
             <div *ngIf="fullName.errors?.['required']">Name is required </div>
             <div *ngIf="fullName.errors?.['pattern']">Enter a valid Name </div>
@@ -15,7 +15,7 @@
         <div class="mb-3 ">
           <label for="email" class="form-label">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            formControlName="email" name="email" placeholder="Type your email">
+            formControlName="email" name="Email" placeholder="Type your email">
           <small *ngIf="email.invalid &&(email.dirty || email.touched)" class=" ">
             <div *ngIf="email.errors?.['required']">Email is required </div>
             <div *ngIf="email.errors?.['email']">Email should be valid </div>
@@ -23,35 +23,34 @@
         </div>
 
         <div class="mb-3 ">
-          <label for="Phonenumber" class="form-label">Phone Number</label>
+          <label for="phonenumber" class="form-label">Phone Number</label>
           <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            formControlName="Phonenumber" name="Phonenumber" placeholder="Enter phone number">
-          <small *ngIf="Phonenumber.invalid &&(Phonenumber.dirty || Phonenumber.touched)" class="">
-            <div *ngIf="Phonenumber.errors?.['required']">Phone number is required </div>
-            <div *ngIf="Phonenumber.errors?.['pattern']"> Enter valid Phonenumber </div>
+            formControlName="phonenumber" name="Phonenumber" placeholder="Enter phone number">
+          <small *ngIf="phonenumber.invalid &&( phonenumber.touched)" class="">
+            <div *ngIf="phonenumber.errors?.['required']">Phone number is required </div>
           </small>
         </div>
 
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password"
-            name="password" placeholder="Type your password">
+            name="Password" placeholder="Type your password">
           <small *ngIf="password.invalid &&(password.dirty || password.touched)" class="">
             <div *ngIf="password.errors?.['required']">password is required </div>
           </small>
         </div>
 
         <div class="mb-3">
-          <label for=" Confirmpassword" class="form-label">Confirm Password</label>
+          <label for=" ConfirmPassword" class="form-label">Confirm Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1" formControlName="confirmPassword"
-            name="confirmPassword" placeholder="Confirm your password ">
+            name="ConfirmPassword" placeholder="Confirm your password ">
           <small *ngIf="confirmPassword.invalid &&(confirmPassword.dirty || confirmPassword.touched)" class="">
             <div *ngIf="confirmPassword.errors?.['required']">Confirm the Password </div>
           </small>
         </div>
 
-        <button type="submit" class="btn btn-primary" label="Register"
-          [disabled]="registerFrom.invalid">Register</button>
+        <button type="submit" class="btn btn-primary" label="Register" routerLink="/login" (click)="registerForm()"
+        [disabled]="registerFrom.invalid">Register </button>
         <div class="mt-2">Already a member? <a routerLink="/login">Login</a></div>
 
       </form>
