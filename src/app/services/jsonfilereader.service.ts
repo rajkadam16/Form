@@ -4,11 +4,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class NotificationService {
-
+export class JsonfilereaderService {
   constructor (private http: HttpClient){}
-  notification(){
-    return this.http.get('assets/master/sys-notificaton.json')
+  parseJsonFile(path:string){
+    return this.http.get(path)
   }
 
 }
