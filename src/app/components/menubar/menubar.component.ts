@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
   templateUrl: './menubar.component.html',
   styleUrls: ['./menubar.component.css'],
 })
-export class MenubarComponent implements OnInit{
+export class MenubarComponent implements OnInit {
   navbarData: any[] = [];
 
-  constructor(private menuBar: JsonfilereaderService, private router: Router) {}
+  constructor(private menuBar: JsonfilereaderService, private router: Router) { }
 
   ngOnInit(): void {
     this.menuBar.parseJsonFile(SystemConfig.navigatorJson).subscribe((res: any) => {
@@ -19,8 +19,7 @@ export class MenubarComponent implements OnInit{
     });
   }
 
-  naviagte(navigatTo:string){
-    console.log("FXIME: navigate to given url: "+navigatTo)
+  naviagte(navigatTo: string) {
     this.router.navigate([navigatTo]);
   }
 
