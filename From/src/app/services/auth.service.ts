@@ -8,7 +8,7 @@ import { inject, Injectable } from '@angular/core';
 export class AuthService {
   constructor (private http: HttpClient){}
   getNavBar(){
-    return this.http.get('assets/navDb.json')
+    return this.http.get('assets/master/navDb.json')
   }
 
 }
