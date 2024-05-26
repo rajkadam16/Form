@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { NavbarService } from 'src/app/services/navbar.service';
+import { JsonfilereaderService } from 'src/app/services/jsonfilereader.service';
+import { SystemConfig } from 'src/app/shared/systemconfig';
 
 @Component({
   selector: 'app-menubar',
@@ -9,10 +10,10 @@ import { NavbarService } from 'src/app/services/navbar.service';
 export class MenubarComponent implements OnInit{
   navbarData: any[] = [];
 
-  constructor(private menuBar: NavbarService) {}
+  constructor(private menuBar: JsonfilereaderService) {}
 
   ngOnInit(): void {
-    this.menuBar.getNavBar().subscribe((res: any) => {
+    this.menuBar.parseJsonFile(SystemConfig.navigatorJson).subscribe((res: any) => {
       this.navbarData = res;
     });
   }

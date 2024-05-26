@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NotificationService } from 'src/app/services/notification.service';
-
+import { JsonfilereaderService } from 'src/app/services/jsonfilereader.service';
+import { SystemConfig } from 'src/app/shared/systemconfig';
 @Component({
   selector: 'app-notification-bar',
   templateUrl: './notification-bar.component.html',
@@ -9,10 +9,10 @@ import { NotificationService } from 'src/app/services/notification.service';
 export class NotificationBarComponent implements OnInit {
   notificationData: any[] = [];
 
-  constructor(private notification: NotificationService) {}
+  constructor(private notification: JsonfilereaderService) {}
 
   ngOnInit(): void {
-    this.notification.notification().subscribe((res: any) => {
+    this.notification.parseJsonFile(SystemConfig.notificationJson).subscribe((res: any) => {
       this.notificationData = res;
     });
   }
