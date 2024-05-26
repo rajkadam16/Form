@@ -1,0 +1,11 @@
+[
+    {
+      "isEnable": true,
+      "displayMsg":"system is under maintenace",
+      "severity":"",
+      "src": "/assets/images/",
+      "url": "/",
+      "style": "width: 40px; height:40px ;"
+    }
+  
+  ]

@@ -18,6 +18,7 @@ import { CommonFaqComponent } from './components/common-faq/common-faq.component
 import { CommonModule } from '@angular/common';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ImageGallaryComponent } from './components/image-gallary/image-gallary.component';
+import { NotificationBarComponent } from './components/notification-bar/notification-bar.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ImageGallaryComponent } from './components/image-gallary/image-gallary.
     CommonFaqComponent,
     PageNotFoundComponent,
     ImageGallaryComponent,
+    NotificationBarComponent,
     
   ],
   imports: [
