@@ -17,6 +17,7 @@ import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-in
 import { CommonFaqComponent } from './components/common-faq/common-faq.component';
 import { CommonModule } from '@angular/common';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ImageGallaryComponent } from './components/image-gallary/image-gallary.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     PortfolioInfoComponent,
     CommonFaqComponent,
     PageNotFoundComponent,
+    ImageGallaryComponent,
     
   ],
   imports: [
