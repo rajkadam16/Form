@@ -23,15 +23,22 @@
   },
   {
     "isEnable": true,
-    "displayName": "Login",
-    "url": "/login",
+    "displayName": "FAQs",
+    "url": "/commonfaq",
     "routerLinkActive": "active",
     "type": "label"
   },
   {
     "isEnable": true,
-    "displayName": "Logout",
-    "url": "/logout",
+    "displayName": "About Us",
+    "url": "/aboutus",
+    "routerLinkActive": "active",
+    "type": "label"
+  },
+  {
+    "isEnable": true,
+    "displayName": "Contact",
+    "url": "/contact",
     "routerLinkActive": "active",
     "type": "label"
   }
