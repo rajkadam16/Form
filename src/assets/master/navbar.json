@@ -12,27 +12,27 @@
     "displayName": "Home",
     "url": "/",
     "routerLinkActive": "active",
-    "type": "lable"
+    "type": "label"
   },
   {
     "isEnable": true,
     "displayName": "Portfolio Info",
     "url": "/portfolioinfo",
     "routerLinkActive": "active",
-    "type": "lable"
+    "type": "label"
   },
   {
     "isEnable": true,
     "displayName": "Login",
     "url": "/login",
     "routerLinkActive": "active",
-    "type": "lable"
+    "type": "label"
   },
   {
     "isEnable": true,
     "displayName": "Logout",
     "url": "/logout",
     "routerLinkActive": "active",
-    "type": "lable"
+    "type": "label"
   }
 ]
