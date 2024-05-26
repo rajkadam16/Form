@@ -5,10 +5,10 @@ import { inject, Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class NavbarService {
   constructor (private http: HttpClient){}
-  // getNavBar(){
-  //   return this.http.get('assets/master/navDb.json')
-  // }
+  getNavBar(){
+    return this.http.get('assets/master/navbar.json')
+  }
 
 }

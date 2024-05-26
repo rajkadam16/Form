@@ -1,14 +1,18 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container-fluid">
-    <a *ngFor="let item of data" class="navbar-brand " [routerLink]="item.router">{{item.logo}}</a>
+    <span *ngFor="let navbar of navbarData" >
+      <a *ngIf="navbar.type == 'image'"  class="navbar-brand " [routerLink]="navbar.url">
+        <img src="{{navbar.src}}" [alt]="navbar.displayName" class="logo" [style]='navbar.style'>
+      </a>
+    </span>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbar-collapse collapse" id="navbarCollapse" style="">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0 ">
-        <li class="nav-item d-flex">
-          <a *ngFor="let item of data" [class]="item.class" aria-current="page" [routerLink]="item.url" routerLinkActive="active">{{item.displayName}}</a>
+    <div class="navbar-collapse collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-navbar d-flex" *ngFor="let navbar of navbarData">
+          <span  *ngIf="navbar.type === 'lable' && navbar.isEnable "><a  class="nav-link" aria-current="page" [routerLink]="navbar.url" routerLinkActive="active">{{navbar.displayName}}</a></span>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -18,3 +22,4 @@
     </div>
   </div>
 </nav>
+
