@@ -1,3 +1,10 @@
 <div *ngFor="let notification of notificationData">
-    <marquee>{{notification.displayMsg}}</marquee>
+    <div *ngIf="notification.isEnabled"
+        class="p-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+        <marquee>
+            <a class="navbar-brand " [routerLink]="notification.url">
+                {{notification.displayMsg}}
+            </a>
+        </marquee>
+    </div>
 </div>
