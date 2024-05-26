@@ -32,6 +32,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     PortfolioInfoComponent,
     CommonFaqComponent,
     PageNotFoundComponent,
+    
   ],
   imports: [
     BrowserModule,
