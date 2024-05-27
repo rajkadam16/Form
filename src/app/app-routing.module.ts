@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-info.component';
 import { CommonFaqComponent } from './components/common-faq/common-faq.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'portfolioinfo',
     component: PortfolioInfoComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
   },
   { path:"**",
   component:PageNotFoundComponent },

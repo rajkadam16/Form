@@ -19,6 +19,7 @@ import { CommonModule } from '@angular/common';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ImageGallaryComponent } from './components/image-gallary/image-gallary.component';
 import { NotificationBarComponent } from './components/notification-bar/notification-bar.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NotificationBarComponent } from './components/notification-bar/notifica
     PageNotFoundComponent,
     ImageGallaryComponent,
     NotificationBarComponent,
+    ProfileComponent,
     
   ],
   imports: [
