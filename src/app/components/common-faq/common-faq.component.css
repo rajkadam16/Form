@@ -1,0 +1,16 @@
+::ng-deep .mat-expansion-panel {
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+::ng-deep .mat-expansion-panel-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+::ng-deep .mat-expansion-panel-content {
+  padding: 10px;
+}
+

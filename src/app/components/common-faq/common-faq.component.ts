@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { JsonfilereaderService } from 'src/app/services/jsonfilereader.service';
 import { SystemConfig } from 'src/app/shared/systemconfig';
-
 @Component({
   selector: 'app-common-faq',
   templateUrl: './common-faq.component.html',
@@ -19,4 +17,5 @@ controls: any;
       this.faqData = res;
     });
   }
+
 }
