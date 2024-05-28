@@ -20,6 +20,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ImageGallaryComponent } from './components/image-gallary/image-gallary.component';
 import { NotificationBarComponent } from './components/notification-bar/notification-bar.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     ImageGallaryComponent,
     NotificationBarComponent,
     ProfileComponent,
+
     
   ],
   imports: [
@@ -48,6 +50,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatExpansionModule
   ],
 
   bootstrap: [AppComponent],
