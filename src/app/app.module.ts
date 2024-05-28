@@ -20,7 +20,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ImageGallaryComponent } from './components/image-gallary/image-gallary.component';
 import { NotificationBarComponent } from './components/notification-bar/notification-bar.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { MatExpansionModule } from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -50,7 +50,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatExpansionModule
   ],
 
   bootstrap: [AppComponent],
