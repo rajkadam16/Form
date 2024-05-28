@@ -1,7 +1,7 @@
 [
     {
       "isEnabled": true,
-      "displayMsg":"system is under maintenace",
+      "displayMsg":"This system is under maintenace mode. please wait until further notice.",
       "severity":"1",
       "src": "/assets/images/",
       "url": "/logout",
