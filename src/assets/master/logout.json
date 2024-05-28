@@ -1,0 +1,10 @@
+[
+    {
+        "isEnable": true,
+        "title": "You have been logged out",
+        "reason":"  You have been logged out due to inactivity please login again to continue",
+        "url": "/",
+        "btnColor":" ",
+        "btnName":"Back to login"
+      }
+]

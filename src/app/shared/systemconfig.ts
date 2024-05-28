@@ -3,5 +3,6 @@ export const SystemConfig = {
     navigatorJson: "assets/master/navbar.json",
     faqJson: "assets/master/faq.json",
     profileJson: "assets/master/profile.json",
+    logoutJson: "assets/master/logout.json",
 
 }
