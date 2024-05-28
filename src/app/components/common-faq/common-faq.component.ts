@@ -17,5 +17,7 @@ controls: any;
       this.faqData = res;
     });
   }
-
+  togglePanel(panel: any) {
+    panel.isOpen = !panel.isOpen;
+  }
 }
