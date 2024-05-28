@@ -27,12 +27,3 @@ To deploy this project run
   ng serve --open
 ```
 
-
-## Deployment
-
-To deploy this project run
-
-```bash
-  ng serve --open
-```
-
