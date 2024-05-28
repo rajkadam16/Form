@@ -1,9 +1,16 @@
-<div class="d-flex flex-column pt-5 ">
-  <mat-expansion-panel *ngFor="let faqs of faqData" class="mb-4">
-    <mat-expansion-panel-header >
-  <h3>{{ faqs.displayName }}</h3>
-    </mat-expansion-panel-header>
-    <p>{{ faqs.info }}</p>
-  </mat-expansion-panel>
+ <div class="accordion pt-2" id="accordionExample" *ngFor="let faqs of faqData; let i = index">
+    <div *ngIf="faqs.isEnable === true" class="accordion-item">
+      <h2 class="accordion-header" id="heading{{i}}">
+        <button class="accordion-button" [ngClass]="{'collapsed': !faqs.isOpen}" type="button" (click)="togglePanel(faqs)">
+          {{ faqs.displayName }}
+        </button>
+      </h2>
+      <div [ngClass]="{'collapse': !faqs.isOpen, 'show': faqs.isOpen}" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          {{ faqs.info }}
+        </div>
+      </div>
+    </div>
+  </div>
   
-</div>
+
