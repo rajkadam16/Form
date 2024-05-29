@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+import { FormBuilder, FormGroup, MinLengthValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,23 +7,23 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  myForm!: FormGroup;
+  constructor(private fb: FormBuilder) {}
   loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
+    email: ['',[Validators.required, Validators.email]],
+    password: ['',[Validators.required,Validators.minLength(8)]]
   });
-  login() {
-    console.log(this.loginForm.value);
-  }
-  constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-    private router: Router
-  ) {}
 
+  onSubmit(){
+    console.log(this.loginForm.value);
+    this.loginForm.reset();
+  }
   get email() {
     return this.loginForm.controls['email'];
   }
   get password() {
     return this.loginForm.controls['password'];
+  
   }
+
 }
