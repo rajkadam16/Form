@@ -1,4 +1,4 @@
-<footer class="py-5 px-3">
+<!-- <footer class="py-5 px-3">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
         <h5>Section</h5>
@@ -54,4 +54,47 @@
         <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
       </ul>
     </div>
+  </footer> -->
+
+  <footer class="py-4">
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-md" *ngFor="let section of sections">
+          <h5>{{ section.title }}</h5>
+          <ul class="list-unstyled">
+            <li *ngFor="let link of section.links">
+              <a [routerLink]="link.url" class="text-dark">{{ link.name }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container" *ngFor="let form of forms" >
+          <h5>{{form.title}}</h5>
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-row justify-content-center">
+              <div class="col-auto">
+              <input type="email" class="form-control mb-2 " [placeholder]="form.inputPlaceholder" [(ngModel)]="email" name="email" required>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-2">{{form.btnName}}</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-4">
+        <div class="col-md text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item" *ngFor="let social of socialMedia">
+              <a [routerLink]="social.url" class="text-dark">
+                <i [class]="social.icon"></i> {{ social.name }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
+  
+  
