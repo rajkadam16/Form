@@ -1,0 +1,79 @@
+{
+  "sections": [
+    {
+      "title": "Company",
+      "links": [
+        {
+          "name": "About Us",
+          "url": "aboutus"
+        },
+        {
+          "name": "Careers",
+          "url": "careers"
+        },
+        {
+          "name": "Press",
+          "url": "press"
+        }
+      ]
+    },
+    {
+      "title": "Support",
+      "links": [
+        {
+          "name": "Help Center",
+          "url": "help"
+        },
+        {
+          "name": "Contact Us",
+          "url": "contact"
+        },
+        {
+          "name": "FAQ",
+          "url": "commonfaq"
+        }
+      ]
+    },
+    {
+      "title": "Legal",
+      "links": [
+        {
+          "name": "Privacy Policy",
+          "url": "privacy"
+        },
+        {
+          "name": "Terms of Service",
+          "url": "terms"
+        },
+        {
+          "name": "Cookie Policy",
+          "url": "cookies"
+        }
+      ]
+    }
+  ],
+  "socialMedia": [
+    {
+      "name": "Facebook",
+      "url": "",
+      "icon": ""
+    },
+    {
+      "name": "Twitter",
+      "url": "",
+      "icon": ""
+    },
+    {
+      "name": "Instagram",
+      "url": "",
+      "icon": ""
+    }
+  ],
+  "forms": [
+    {
+      "title": " Subscribe to our newsletter",
+      "inputPlaceholder":"Enter your email",
+      "btnName":"Subscribe"
+    }
+  ]
+}
