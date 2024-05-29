@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center my-5">
+ <div class="d-flex justify-content-center my-5">
   <div class="p-5 bg-body-tertiary rounded-3">
     <div class="card" style="width: 18rem">
       <div class="card-body">
@@ -6,9 +6,19 @@
           <h2 class="mb-3">Login</h2>
           <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              formControlName="email" name="email" placeholder="Type your email" />
-            <small *ngIf="email.invalid && (email.dirty || email.touched)" class="">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              formControlName="email"
+              name="email"
+              placeholder="Type your email"
+            />
+            <small
+              *ngIf="email.invalid && (email.dirty || email.touched)"
+              class=""
+            >
               <div *ngIf="email.errors?.['required']">Email is required</div>
               <div *ngIf="email.errors?.['email']">Email should be valid</div>
             </small>
@@ -16,9 +26,18 @@
 
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password"
-              name="password" placeholder="Type your password" />
-            <small *ngIf="password.invalid && (password.dirty || password.touched)" class="">
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              formControlName="password"
+              name="password"
+              placeholder="Type your password"
+            />
+            <small
+              *ngIf="password.invalid && (password.dirty || password.touched)"
+              class=""
+            >
               <div *ngIf="password.errors?.['required']">
                 password is required
               </div>
@@ -28,15 +47,34 @@
           <div class="mb-3">
             <a routerLink="/forgotpassword"> Forgot Password?</a>
           </div>
-          <button type="submit" class="btn btn-primary" label="SIGN IN" (click)="login()"
-            [disabled]="loginForm.invalid">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            label="SIGN IN"
+            (click)="onSubmit()"
+            [disabled]="loginForm.invalid"
+
+          >
             Submit
           </button>
           <div class="mt-2">
-            Not a member? <a routerLink="/register">Register</a>
+            Not a member? <a routerLink="/signup">Register</a>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+
+<!-- 
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email">
+  </div>
+  <button type="submit">Submit</button>
+</form> -->
