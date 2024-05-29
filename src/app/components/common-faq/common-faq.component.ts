@@ -6,8 +6,10 @@ import { SystemConfig } from 'src/app/shared/systemconfig';
   templateUrl: './common-faq.component.html',
   styleUrls: ['./common-faq.component.css']
 })
-export class CommonFaqComponent implements OnInit{
+export class CommonFaqComponent implements OnInit {
   faqData: any[] = [];
+  controls: any;
+
   constructor(public faq: JsonfilereaderService) { }
 
   ngOnInit(): void {
