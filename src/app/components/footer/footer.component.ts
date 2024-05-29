@@ -11,16 +11,6 @@ import { SystemConfig } from 'src/app/shared/systemconfig';
 })
 export class FooterComponent {
 
-  // footerData: any[] = [];
-
-  // constructor(public footer: JsonfilereaderService) { }
-
-  // ngOnInit(): void {
-  //   this.footer.parseJsonFile(SystemConfig.footerJson).subscribe((res: any) => {
-  //     this.footerData= res;
-  //   });
-  // }
-
   sections: any[] = [];
   socialMedia: any[] = [];
   forms: any[] = [];

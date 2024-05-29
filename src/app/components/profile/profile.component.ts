@@ -10,14 +10,11 @@ import { SystemConfig } from 'src/app/shared/systemconfig';
 export class ProfileComponent {
   profileData: any[] = [];
 
-  constructor(public faq: JsonfilereaderService) { }
+  constructor(public profile: JsonfilereaderService) { }
 
   ngOnInit(): void {
-    this.faq.parseJsonFile(SystemConfig.profileJson).subscribe((res: any) => {
+    this.profile.parseJsonFile(SystemConfig.profileJson).subscribe((res: any) => {
       this.profileData = res;
     });
   }
-  
-
-
 }
