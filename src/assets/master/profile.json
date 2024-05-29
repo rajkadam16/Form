@@ -1,61 +1,20 @@
 [
-    {
-        "isEnable": true,
-        "displayName": "Home",
-        "url": "/",
-        "class": "",
-        "type":"url"
-    },
-    {
-        "isEnable": true,
-        "displayName": "User",
-        "url": "user",
-        "class": "",
-        "type":"url"
-    },
-    {
-        "isEnable": true,
-        "displayName": "User Profile",
-        "class": "active",
-        "type":"url"
-    },
-    {
-        "isEnable": true,
-        "displayName": "User Profile",
-        "image":"https://github.com/mdo.png",
-        "name":"Raj kadam",
-        "profession":"web dev",
-        "location":"mumbai",
-        "type": "label"
-    },
-    { 
-        "isEnable": true,
-        "label": "full Name",
-        "value": "Raj kadam",
-        "type": "form"
-    },
-    { 
-        "isEnable": true,
-        "label": "Email",
-        "value": "Kadamraj@gamil.com",
-        "type": "form"
-    },
-    { 
-        "isEnable": true,
-        "label": "Phone No",
-        "value": "9878547845",
-        "type": "form"
-    },
-    { 
-        "isEnable": true,
-        "label": "Mobile",
-        "value": "030405415",
-        "type": "form"
-    },
-    { 
-        "isEnable": true,
-        "label": "Address",
-        "value": "mumbai",
-        "type": "form"
+     {
+      "isEnable":true,
+      "profileImage": "https://bootdey.com/img/Content/avatar/avatar6.png",
+      "name": "Raj kadam",
+      "jobTitle": "Backend Devloper",
+      "location": "Mumbai,India",
+      "btnName1": "Follow",
+      "btnName2": "Message"
     }
-]
+  ]
+
+
+  
+    
+ 
+    
+  
+    
+  
