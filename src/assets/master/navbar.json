@@ -1,6 +1,6 @@
 [
   {
-    "isEnable": true,
+    "isEnabled": true,
     "displayName": "insurance logo",
     "src": "/assets/images/logo.jpg",
     "url": "/",
@@ -8,35 +8,35 @@
     "style": "width: 70px; height:50px ;"
   },
   {
-    "isEnable": true,
+    "isEnabled": true,
     "displayName": "Home",
     "url": "/",
     "routerLinkActive": "active",
     "type": "label"
   },
   {
-    "isEnable": true,
+    "isEnabled": true,
     "displayName": "Portfolio Info",
     "url": "/portfolioinfo",
     "routerLinkActive": "active",
     "type": "label"
   },
   {
-    "isEnable": true,
+    "isEnabled": true,
     "displayName": "FAQs",
     "url": "/commonfaq",
     "routerLinkActive": "active",
     "type": "label"
   },
   {
-    "isEnable": true,
+    "isEnabled": true,
     "displayName": "About Us",
     "url": "/album",
     "routerLinkActive": "active",
     "type": "label"
   },
   {
-    "isEnable": true,
+    "isEnabled": true,
     "displayName": "Contact",
     "url": "/pricing",
     "routerLinkActive": "active",

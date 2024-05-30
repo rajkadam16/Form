@@ -1,6 +1,6 @@
 [
     {
-        "isEnable": true,
+        "isEnabled": true,
         "class":"row featurette  flex-row-reverse",
         "heading1":" Oh yeah, it’s that good.",
         "heading2":" See for yourself.",
@@ -10,7 +10,7 @@
         
     },
     {
-        "isEnable": true,
+        "isEnabled": true,
         "class":"row featurette ",
         "heading1":" Oh yeah, it’s that good.",
         "heading2":" See for yourself.",
@@ -20,7 +20,7 @@
         
     },
     {
-        "isEnable": true,
+        "isEnabled": true,
         "class":"row featurette  flex-row-reverse",
         "heading1":" Oh yeah, it’s that good.",
         "heading2":" See for yourself.",
@@ -31,7 +31,7 @@
         
     },
     {
-        "isEnable": true,
+        "isEnabled": true,
         "class":"row featurette  ",
         "heading1":" Oh yeah, it’s that good.",
         "heading2":" See for yourself.",
