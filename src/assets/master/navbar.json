@@ -2,7 +2,7 @@
   {
     "isEnable": true,
     "displayName": "insurance logo",
-    "src": "/assets/images/sampleLogo.avif",
+    "src": "/assets/images/logo.jpg",
     "url": "/",
     "type": "image",
     "style": "width: 70px; height:50px ;"

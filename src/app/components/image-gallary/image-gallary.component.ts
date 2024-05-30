@@ -8,19 +8,16 @@ import { SystemConfig } from 'src/app/shared/systemconfig';
   styleUrls: ['./image-gallary.component.css']
 })
 export class ImageGallaryComponent {
-  imagegallaryData: any[] = [];
+  carousel: any[] = [];
+  button: any[] = [];
 
   constructor(private imageGallary: JsonfilereaderService) { }
 
   ngOnInit(): void {
     this.imageGallary.parseJsonFile(SystemConfig.imagegallaryJson).subscribe((res: any) => {
-      this.imagegallaryData = res;
+      this.carousel = res.carousel;
+      this.button = res.button;
     });
   }
 
-  images = [
-    { src: 'assets/image1.jpg', alt: 'Image 1' },
-    { src: 'assets/image2.jpg', alt: 'Image 2' },
-    { src: 'assets/image3.jpg', alt: 'Image 3' }
-  ];
 }
