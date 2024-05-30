@@ -38,7 +38,7 @@
   {
     "isEnable": true,
     "displayName": "Contact",
-    "url": "/contact",
+    "url": "/pricing",
     "routerLinkActive": "active",
     "type": "label"
   }

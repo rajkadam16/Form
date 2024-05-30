@@ -1,0 +1,18 @@
+{
+  "header": {
+    "isEnabled": true,
+    "src": "http://www.w3.org/2000/svg",
+    "discription": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    "style": "width: 70px; height:50px ;",
+    "displayName": "Thumbnail",
+    "viewControl": {
+      "name": "View",
+      "eventName": "onClickView"
+    },
+    "editControl": {
+      "name": "Edit",
+      "eventName": "onClickEdit"
+    },
+    "duration": "14 mins"
+  }
+}
