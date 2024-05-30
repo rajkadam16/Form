@@ -1,51 +1,62 @@
 {
   "sections": [
     {
+      "isEnabled": true,
       "title": "Company",
       "links": [
-        {
+        { 
+          "isEnabled": true,
           "name": "About Us",
           "url": "aboutus"
         },
         {
+          "isEnabled": true,
           "name": "Careers",
           "url": "careers"
         },
         {
+          "isEnabled": true,
           "name": "Press",
           "url": "press"
         }
       ]
     },
-    {
+    { "isEnabled": true,
       "title": "Support",
       "links": [
         {
+          "isEnabled": true,
           "name": "Help Center",
           "url": "help"
         },
         {
+          "isEnabled": true,
           "name": "Contact Us",
           "url": "contact"
         },
         {
+          "isEnabled": true,
           "name": "FAQ",
           "url": "commonfaq"
         }
       ]
     },
     {
+      "isEnabled": true,
       "title": "Legal",
       "links": [
         {
+          "isEnabled": true,
           "name": "Privacy Policy",
           "url": "privacy"
         },
         {
+          "isEnabled": true,
           "name": "Terms of Service",
           "url": "terms"
         },
         {
+          "isEnabled": true,
           "name": "Cookie Policy",
           "url": "cookies"
         }
@@ -54,16 +65,19 @@
   ],
   "socialMedia": [
     {
+      "isEnabled": true,
       "name": "Facebook",
       "url": "",
       "icon": ""
     },
     {
+      "isEnabled": true,
       "name": "Twitter",
       "url": "",
       "icon": ""
     },
     {
+      "isEnabled": true,
       "name": "Instagram",
       "url": "",
       "icon": ""
@@ -71,6 +85,7 @@
   ],
   "forms": [
     {
+      "isEnabled": true,
       "title": " Subscribe to our newsletter",
       "inputPlaceholder":"Enter your email",
       "btnName":"Subscribe"
