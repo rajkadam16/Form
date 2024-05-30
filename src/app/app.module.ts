@@ -22,6 +22,7 @@ import { NotificationBarComponent } from './components/notification-bar/notifica
 import { ProfileComponent } from './components/profile/profile.component';
 import { AlbumComponent } from './components/album/album.component';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { FeaturetteComponent } from './components/featurette/featurette.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { PricingComponent } from './components/pricing/pricing.component';
     ProfileComponent,
     AlbumComponent,
     PricingComponent,
+    FeaturetteComponent,
 
     
   ],

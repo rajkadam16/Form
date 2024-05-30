@@ -1,0 +1,16 @@
+<div class="my-5" *ngFor="let featurette of featuretteData">
+    <div *ngIf="featurette.isEnable" [class]="featurette.class">
+        <div class="col-md-7 order-md-2 my-auto">
+            <h2 class="featurette-heading fw-normal lh-1">
+                {{ featurette.heading1 }}
+                <span class="text-body-secondary">{{ featurette.heading2 }}</span>
+            </h2>
+            <p class="lead">
+                {{ featurette.text }}
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+           <img [src]=" featurette.image " alt="Generic placeholder image" [style]="featurette.imgstyle">
+        </div>
+    </div>
+</div> 
