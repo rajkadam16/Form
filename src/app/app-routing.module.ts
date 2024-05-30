@@ -13,6 +13,7 @@ import { CommonFaqComponent } from './components/common-faq/common-faq.component
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AlbumComponent } from './components/album/album.component';
+import { PricingComponent } from './components/pricing/pricing.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,10 @@ const routes: Routes = [
   {
     path: 'album',
     component: AlbumComponent,
+  },
+  {
+    path: 'pricing',
+    component: PricingComponent,
   },
   {
     path: "**",
