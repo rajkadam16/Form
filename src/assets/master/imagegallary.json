@@ -1,0 +1,23 @@
+[
+    {
+        "isEnable":true,
+        "heading":"Example headline 1",
+        "message":"Responsive Design: Bootstrap's grid system and responsive utilities make it easy to create layouts that adapt seamlessly to different screen sizes and devices.",
+        "routerLink":"signup",
+        "btnName":"Sign up to today"
+    },
+    {
+        "isEnable":true,
+        "heading":"Example headline 2",
+        "message":"Pre-designed Components: It offers a wide range of reusable HTML, CSS, and JavaScript components like navigation bars, buttons, forms, and modals, which help speed up development.",
+        "routerLink":"login",
+        "btnName":"login"
+    },
+    {
+        "isEnable":true,
+        "heading":"Example headline 3",
+        "message":"Customization and Extensibility: Developers can customize Bootstrap's default styles using Sass variables and extend its functionality with numerous plugins and themes available in the Bootstrap ecosystem.",
+        "routerLink":"logout",
+        "btnName":"logout"
+    }
+]

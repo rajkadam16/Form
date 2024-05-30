@@ -7,4 +7,5 @@ export const SystemConfig = {
     footerJson: "assets/master/footer.json",
     albumJson: "assets/master/album.json",
     pricingJson: "assets/master/pricing.json",
+    imagegallaryJson: "assets/master/imagegallary.json",
 }
