@@ -20,6 +20,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ImageGallaryComponent } from './components/image-gallary/image-gallary.component';
 import { NotificationBarComponent } from './components/notification-bar/notification-bar.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AlbumComponent } from './components/album/album.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     ImageGallaryComponent,
     NotificationBarComponent,
     ProfileComponent,
+    AlbumComponent,
 
     
   ],

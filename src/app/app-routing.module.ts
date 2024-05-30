@@ -12,6 +12,7 @@ import { PortfolioInfoComponent } from './components/portfolio-info/portfolio-in
 import { CommonFaqComponent } from './components/common-faq/common-faq.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AlbumComponent } from './components/album/album.component';
 
 const routes: Routes = [
   {
@@ -50,8 +51,14 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
   },
-  { path:"**",
-  component:PageNotFoundComponent },
+  {
+    path: 'album',
+    component: AlbumComponent,
+  },
+  {
+    path: "**",
+    component: PageNotFoundComponent
+  },
   {
     path: '',
     redirectTo: '',
@@ -63,4 +70,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -1,10 +1,10 @@
 [
-    {
-      "isEnabled": true,
-      "displayMsg":"This system is under maintenace mode. please wait until further notice.",
-      "severity":"1",
-      "src": "/assets/images/",
-      "url": "/logout",
-      "style": "width: 40px; height:40px ;"
-    }
+  {
+    "isEnabled": true,
+    "displayMsg": "This system is under maintenance mode. please wait until further notice.",
+    "severity": "1",
+    "src": "/assets/images/",
+    "url": "/logout",
+    "style": "width: 40px; height:40px ;"
+  }
 ]
