@@ -5,4 +5,5 @@ export const SystemConfig = {
     profileJson: "assets/master/profile.json",
     logoutJson: "assets/master/logout.json",
     footerJson: "assets/master/footer.json",
+    albumJson: "assets/master/album.json",
 }

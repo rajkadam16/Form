@@ -1,20 +1,11 @@
 [
-     {
-      "isEnable":true,
-      "profileImage": "https://bootdey.com/img/Content/avatar/avatar6.png",
-      "name": "Raj kadam",
-      "jobTitle": "Backend Devloper",
-      "location": "Mumbai,India",
-      "btnName1": "Follow",
-      "btnName2": "Message"
-    }
-  ]
-
-
-  
-    
- 
-    
-  
-    
-  
+  {
+    "isEnable": true,
+    "profileImage": "https://bootdey.com/img/Content/avatar/avatar6.png",
+    "name": "Raj Kadam",
+    "jobTitle": "Backend Devloper",
+    "location": "Mumbai, India",
+    "btnName1": "Follow",
+    "btnName2": "Message"
+  }
+]
