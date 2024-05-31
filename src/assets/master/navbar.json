@@ -1,45 +1,75 @@
-[
-  {
-    "isEnabled": true,
-    "displayName": "insurance logo",
-    "src": "/assets/images/logo.jpg",
-    "url": "/",
-    "type": "image",
-    "style": "width: 70px; height:50px ;"
-  },
-  {
-    "isEnabled": true,
-    "displayName": "Home",
-    "url": "/",
-    "routerLinkActive": "active",
-    "type": "label"
-  },
-  {
-    "isEnabled": true,
-    "displayName": "Portfolio Info",
-    "url": "/portfolioinfo",
-    "routerLinkActive": "active",
-    "type": "label"
-  },
-  {
-    "isEnabled": true,
-    "displayName": "FAQs",
-    "url": "/commonfaq",
-    "routerLinkActive": "active",
-    "type": "label"
-  },
-  {
-    "isEnabled": true,
-    "displayName": "About Us",
-    "url": "/album",
-    "routerLinkActive": "active",
-    "type": "label"
-  },
-  {
-    "isEnabled": true,
-    "displayName": "Contact",
-    "url": "/pricing",
-    "routerLinkActive": "active",
-    "type": "label"
-  }
-]
+{
+  "menu1":[
+    {
+      "isEnabled": true,
+      "displayName": "insurance logo",
+      "src": "/assets/images/logo.jpg",
+      "url": "/",
+      "type": "image",
+      "style": "width: 70px; height:50px ;"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "Home",
+      "url": "/",
+      "routerLinkActive": "active",
+      "type": "label"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "Portfolio Info",
+      "url": "/portfolioinfo",
+      "routerLinkActive": "active",
+      "type": "label"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "FAQs",
+      "url": "/commonfaq",
+      "routerLinkActive": "active",
+      "type": "label"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "About Us",
+      "url": "/album",
+      "routerLinkActive": "active",
+      "type": "label"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "Contact",
+      "url": "/pricing",
+      "routerLinkActive": "active",
+      "type": "label"
+    }
+  ],
+  "menu2":[
+    {
+      "isEnabled": true,
+      "displayName": "Sign Up",
+      "url": "signup"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "Settings",
+      "url": "/"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "profile",
+      "url": "profile"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "Logout",
+      "url": "logout"
+    }
+  ],
+  "profileImg":[
+    {
+      "isEnabled": true,
+      "img":"https://github.com/mdo.png"
+    }
+  ]
+}
