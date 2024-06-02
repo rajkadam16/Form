@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ProfileComponent } from './components/profile/profile.component';
 import { AlbumComponent } from './components/album/album.component';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { TableComponent } from './components/table/table.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: 'pricing',
     component: PricingComponent,
+  },
+  {
+    path: 'table',
+    component: TableComponent,
   },
   {
     path: "**",
