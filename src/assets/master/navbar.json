@@ -11,43 +11,37 @@
       "isEnabled": true,
       "displayName": "Home",
       "url": "/",
-      "routerLinkActive": "active",
-      "type": "label"
+      "routerLinkActive": "active"
     },
     {
       "isEnabled": true,
       "displayName": "Portfolio Info",
       "url": "/portfolioinfo",
-      "routerLinkActive": "active",
-      "type": "label"
+      "routerLinkActive": "active"
     },
     {
       "isEnabled": true,
       "displayName": "FAQs",
       "url": "/commonfaq",
-      "routerLinkActive": "active",
-      "type": "label"
+      "routerLinkActive": "active"
     },
     {
       "isEnabled": true,
       "displayName": "About Us",
       "url": "/album",
-      "routerLinkActive": "active",
-      "type": "label"
+      "routerLinkActive": "active"
     },
     {
       "isEnabled": true,
       "displayName": "Contact",
       "url": "/pricing",
-      "routerLinkActive": "active",
-      "type": "label"
+      "routerLinkActive": "active"
     },
     {
       "isEnabled": true,
       "displayName": "Table",
       "url": "/table",
-      "routerLinkActive": "active",
-      "type": "label"
+      "routerLinkActive": "active"
     }
   ],
   "buttonMenuItems": [
