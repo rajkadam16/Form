@@ -9,17 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./menubar.component.css'],
 })
 export class MenubarComponent implements OnInit {
-  navbar1Data: any[] = [];
-  navbar2Data: any[] = [];
-  navbar3Data: any[] = [];
+  logo: any = {};
+  menuItems: any[] = [];
+  buttonMenuItems: any[] = [];
+  dropDownMenuItems: any[] = [];
 
   constructor(private menuBar: JsonfilereaderService, private router: Router) { }
 
   ngOnInit(): void {
     this.menuBar.parseJsonFile(SystemConfig.navigatorJson).subscribe((res: any) => {
-      this.navbar1Data = res.menu1;
-      this.navbar2Data = res.menu2;
-      this.navbar3Data = res.profileImg;
+      this.logo = res.logo;
+      this.menuItems = res.menuItems;
+      this.buttonMenuItems = res.buttonMenuItems;
+      this.dropDownMenuItems = res.dropDownMenuItems;
     });
   }
 

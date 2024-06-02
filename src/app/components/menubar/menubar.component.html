@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container-fluid">
-    <span *ngFor="let navbar of navbar1Data">
-      <a *ngIf="navbar.type == 'image'" class="navbar-brand" [routerLink]="navbar.url">
-        <img src="{{ navbar.src }}" [alt]="navbar.displayName" class="logo" [style]="navbar.style" />
+    <span *ngIf="logo.isEnabled">
+      <a class="navbar-brand" [routerLink]="logo.url">
+        <img [src]="logo.src" [alt]="logo.displayName" class="logo" [style]="logo.style" />
       </a>
     </span>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -10,24 +10,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse collapse" id="navbarCollapse">
+
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-navbar d-flex" *ngFor="let navbar of navbar1Data">
-          <span *ngIf="navbar.type === 'label' && navbar.isEnabled"><a class="nav-link" aria-current="page"
-              [routerLink]="navbar.url" routerLinkActive="active">{{ navbar.displayName }}</a></span>
+        <li *ngFor="let menuItem of menuItems" class="nav-navbar d-flex">
+          <a *ngIf="menuItem.isEnabled" class="nav-link" aria-current="page" [routerLink]="menuItem.url"
+            routerLinkActive="active">{{
+            menuItem.displayName }}</a>
         </li>
       </ul>
 
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2" (click)="naviagte('/login')">
-          Login
+      <div *ngFor="let buttonMenuItem of buttonMenuItems" class="col-md-3 text-end">
+        <button *ngIf="buttonMenuItem.isEnabled" type="button" [class]="buttonMenuItem.style"
+          (click)="naviagte(buttonMenuItem.url)">
+          {{buttonMenuItem.displayName}}
         </button>
       </div>
 
-      <div class="dropdown text-end">
-        <a *ngFor="let profileImg of navbar3Data" href="#"
-          class="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown"
-          aria-expanded="true">
-          <img *ngIf="profileImg.isEnabled" [src]="profileImg.img" alt="mdo" width="32" height="32"
+      <div class="dropdown text-end" *ngFor="let dropDownMenuItem of dropDownMenuItems">
+        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show"
+          data-bs-toggle="dropdown" aria-expanded="true">
+          <img *ngIf="dropDownMenuItem.isEnabled" [src]="dropDownMenuItem.img" alt="mdo" width="32" height="32"
             class="rounded-circle" />
         </a>
         <div>
@@ -37,8 +39,9 @@
               margin: 0px;
               transform: translate3d(0.5px, 34px, 0px);
             ">
-            <li *ngFor="let nav2 of navbar2Data">
-              <a *ngIf="nav2.isEnabled" class="dropdown-item" [routerLink]="nav2.url">{{ nav2.displayName }}</a>
+            <li *ngFor="let childMenuItem of dropDownMenuItem.childMenuItems">
+              <a *ngIf="childMenuItem.isEnabled" class="dropdown-item" [routerLink]="childMenuItem.url">{{
+                childMenuItem.displayName }}</a>
             </li>
           </ul>
         </div>
