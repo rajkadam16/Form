@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <li *ngFor="let image of imagegallaryData; let i = index" [attr.data-bs-target]="'#carouselExampleIndicators'"
-      [attr.data-bs-slide-to]="i" [class.active]="i === 0"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div *ngFor="let image of imagegallaryData; let i = index" class="carousel-item" [class.active]="i === 0">
-=======
 <div id="carouselExampleIndicators" class="carousel slide my-5" data-bs-ride="carousel">
   <ol class="carousel-indicators">
     <li *ngFor="let image of carousel; let i = index" [attr.data-bs-target]="'#carouselExampleIndicators'"
@@ -14,7 +5,6 @@
   </ol>
   <div class="carousel-inner">
     <div *ngFor="let image of carousel; let i = index" class="carousel-item" [class.active]="i === 0">
->>>>>>> 1797dcbfe0d48e1ba9baf5948868e849526358e5
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
         preserveAspectRatio="xMidYMid slice" focusable="false">
         <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
