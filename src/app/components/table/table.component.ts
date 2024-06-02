@@ -21,15 +21,24 @@ export class TableComponent {
       this.tableSectionData = res.tableSection;
     });
   }
-
   toggleCheckAll() {
     this.checkAll = !this.checkAll;
     this.tableInfoData.forEach(item => item.selected = this.checkAll);
-
   }
   onItemChange() {
     this.checkAll = this.tableInfoData.every(item => item.selected);
   }
+  searchText: string = '';
+  items: string[] = ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple'];
+  friuts: string[] = ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple'];
 
+  searchItems() {
+    return this.items.filter(item =>
+      item.toLowerCase().includes(this.searchText.toLowerCase())
+    );
   }
-
+  deleteItem(index: number) {
+    this.friuts.splice(index, 1);
+  }
+  
+  }
