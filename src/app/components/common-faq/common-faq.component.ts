@@ -8,7 +8,6 @@ import { SystemConfig } from 'src/app/shared/systemconfig';
 })
 export class CommonFaqComponent implements OnInit {
   faqData: any[] = [];
-  controls: any;
 
   constructor(public faq: JsonfilereaderService) { }
 
