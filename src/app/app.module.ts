@@ -27,6 +27,7 @@ import { FeaturetteComponent } from './components/featurette/featurette.componen
 import { TableComponent } from './components/table/table.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { TableComponent } from './components/table/table.component';
     ColsOfCarouselComponent,
     FeaturetteComponent,
     TableComponent,
+
   ],
   imports: [
     BrowserModule,
