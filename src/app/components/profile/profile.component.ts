@@ -9,12 +9,16 @@ import { SystemConfig } from 'src/app/shared/systemconfig';
 })
 export class ProfileComponent {
   profileData: any[] = [];
+  formInfoData: any[] = [];
+  buttonData: any[] = [];
 
   constructor(public profile: JsonfilereaderService) { }
 
   ngOnInit(): void {
     this.profile.parseJsonFile(SystemConfig.profileJson).subscribe((res: any) => {
-      this.profileData = res;
+      this.profileData = res.profile;
+      this.formInfoData = res.formInfo;
+      this.buttonData = res.button;
     });
   }
 }

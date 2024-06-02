@@ -23,6 +23,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AlbumComponent } from './components/album/album.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { ColsOfCarouselComponent } from './components/cols-of-carousel/cols-of-carousel.component';
+import { FeaturetteComponent } from './components/featurette/featurette.component';
 
 
 @NgModule({
@@ -45,8 +46,7 @@ import { ColsOfCarouselComponent } from './components/cols-of-carousel/cols-of-c
     AlbumComponent,
     PricingComponent,
     ColsOfCarouselComponent,
-
-    
+    FeaturetteComponent,
   ],
   imports: [
     BrowserModule,

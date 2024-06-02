@@ -1,11 +1,47 @@
-[
-  {
-    "isEnable": true,
-    "profileImage": "https://bootdey.com/img/Content/avatar/avatar6.png",
-    "name": "Raj Kadam",
-    "jobTitle": "Backend Devloper",
-    "location": "Mumbai, India",
-    "btnName1": "Follow",
-    "btnName2": "Message"
-  }
-]
+{
+  "profile":[
+    {
+      "isEnabled": true,
+      "profileImage": "https://bootdey.com/img/Content/avatar/avatar6.png",
+      "name": "Raj Kadam",
+      "jobTitle": "Backend Devloper",
+      "location": "Mumbai, India",
+      "btnName1": "Follow",
+      "btnName2": "Message"
+    }
+  ],
+  "formInfo":[
+    {
+      "isEnabled": true,
+      "label":"Name",
+      "value": "Raj Kadam"
+    },
+    {
+      "isEnabled": true,
+      "label":"Phone",
+      "value": "+1-212-456-7890"
+    },
+    {
+      "isEnabled": true,
+      "label":"Email",
+      "value": "raj.kadam@example.com"
+    },
+    {
+      "isEnabled": true,
+      "label":"Mobile",
+      "value": "010 1 718 222 2222"
+    },
+    {
+      "isEnabled": true,
+      "label":"Address",
+      "value": "chicago ,Illinois."
+    }
+  ],
+  "button":[
+    {
+      "isEnabled": true,
+      "btnValue": "Save change",
+      "type":"button"
+    }
+  ]
+}

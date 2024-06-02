@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "isEnable": true,
+=======
+        "isEnabled": true,
+>>>>>>> 1797dcbfe0d48e1ba9baf5948868e849526358e5
         "title": "You have been logged out",
         "reason":"  You have been logged out due to inactivity please login again to continue",
         "url": "/",

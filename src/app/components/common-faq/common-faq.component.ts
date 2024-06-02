@@ -8,7 +8,7 @@ import { SystemConfig } from 'src/app/shared/systemconfig';
 })
 export class CommonFaqComponent implements OnInit {
   faqData: any[] = [];
-  
+
   constructor(public faq: JsonfilereaderService) { }
 
   ngOnInit(): void {
