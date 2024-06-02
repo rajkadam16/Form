@@ -42,6 +42,13 @@
       "url": "/pricing",
       "routerLinkActive": "active",
       "type": "label"
+    },
+    {
+      "isEnabled": true,
+      "displayName": "Table",
+      "url": "/table",
+      "routerLinkActive": "active",
+      "type": "label"
     }
   ],
   "menu2":[
