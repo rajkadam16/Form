@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { JsonfilereaderService } from 'src/app/services/jsonfilereader.service';
 import { SystemConfig } from 'src/app/shared/systemconfig';
@@ -11,8 +12,10 @@ export class TableComponent {
   tableInfoData: any[] = [];
   tableSectionData: any[] = [];
   checkAll: boolean = false;
+  pageSize = 5;
+  currentPage = 1
 
-  constructor(private table: JsonfilereaderService) {}
+  constructor(private table: JsonfilereaderService ) {}
   ngOnInit(): void {
     this.table.parseJsonFile(SystemConfig.tableJson).subscribe((res: any) => {
       this.tableInfoData = res.tableList;
@@ -26,5 +29,6 @@ export class TableComponent {
   onItemChange() {
     this.checkAll = this.tableInfoData.every((item) => item.selected);
   }
+
   searchtext:any;
 }

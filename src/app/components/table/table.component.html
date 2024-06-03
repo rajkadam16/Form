@@ -1,6 +1,5 @@
  <div class="row container my-5">
    <div class="col-xl-12 col-12 mb-5">
-
       <div class="card h-100 card-lg">
          <div class="p-6">
             <div class="row justify-content-between">
@@ -37,7 +36,7 @@
                      </tr>
                   </thead>
                   <tbody>
-                     <tr *ngFor="let table of tableInfoData|filter:searchtext">
+                     <tr *ngFor="let table of tableInfoData|filter:searchtext | paginate:{itemsPerPage:pageSize,currentPage} ">
                         <td>
                            <div class="form-check">
                               <input class="form-check-input" type="checkbox" [(ngModel)]="table.selected"
@@ -63,25 +62,6 @@
                         </td>
                         <td>${{ table.price }}</td>
                         <td>
-                           <div class="dropdown">
-                              <a href="#" class="text-reset" data-bs-toggle="dropdown" aria-expanded="false">
-                                 <i class="feather-icon icon-more-vertical fs-5"></i>
-                              </a>
-                              <ul class="dropdown-menu" [style]="">
-                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                       <i class="bi bi-trash me-3"></i>
-                                       Delete
-                                    </a>
-                                 </li>
-                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                       <i class="bi bi-pencil-square me-3"></i>
-                                       Edit
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div>
                         </td>
                      </tr>
                   </tbody>
@@ -89,19 +69,7 @@
             </div>
          </div>
          <div class="border-top d-md-flex justify-content-center align-items-center p-6 p-3">
-            <nav class="mt-2 mt-md-0">
-               <ul class="pagination mb-0">
-                  <li class="page-item disabled">
-                     <a class="page-link" href="">Previous</a>
-                  </li>
-                  <li class="page-item">
-                     <a class="page-link active" href="">1</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="">2</a></li>
-                  <li class="page-item"><a class="page-link" href="">3</a></li>
-                  <li class="page-item"><a class="page-link" href="">Next</a></li>
-               </ul>
-            </nav>
+            <pagination-controls (pageChange)="currentPage=$event"></pagination-controls>
          </div>
       </div>
    </div>
