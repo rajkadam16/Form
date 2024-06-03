@@ -25,6 +25,9 @@ import { PricingComponent } from './components/pricing/pricing.component';
 import { ColsOfCarouselComponent } from './components/cols-of-carousel/cols-of-carousel.component';
 import { FeaturetteComponent } from './components/featurette/featurette.component';
 import { TableComponent } from './components/table/table.component';
+import { SerachComponent } from './components/serach/serach.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 
@@ -50,6 +53,8 @@ import { TableComponent } from './components/table/table.component';
     ColsOfCarouselComponent,
     FeaturetteComponent,
     TableComponent,
+    SerachComponent,
+    FilterPipe,
 
   ],
   imports: [
