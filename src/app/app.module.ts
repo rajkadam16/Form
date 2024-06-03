@@ -26,10 +26,8 @@ import { ColsOfCarouselComponent } from './components/cols-of-carousel/cols-of-c
 import { FeaturetteComponent } from './components/featurette/featurette.component';
 import { TableComponent } from './components/table/table.component';
 import { SerachComponent } from './components/serach/serach.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from './pipes/filter.pipe';
-
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -65,6 +63,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgxPaginationModule
   ],
 
   bootstrap: [AppComponent],
