@@ -3,24 +3,17 @@
       <div class="card h-100 card-lg">
          <div class="p-6">
             <div class="row justify-content-between">
-               <div class="col-md-4 col-12  my-3 m-3">
-              
+               <div class="col-md-4 col-12  my-3 m-3">     
                      <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control " placeholder="Search your product" aria-label="search ">
-                 
                </div>
-               <div class="col-lg-2 col-md-4 col-12 py-3 px-3">
-                  <select class="form-select">
-                     <option selected="">Status</option>
-                     <option value="Success">Success</option>
-                     <option value="Pending">Pending</option>
-                     <option value="Cancel">Cancel</option>
-                  </select>
+               <div *ngFor="let btn of excelBtnData" class="col-lg-2 col-md-4 col-12 py-3 px-3">
+                  <button (click)="exportExcel()" type="button" class="btn btn-primary">{{btn.buttonName}}</button>
                </div>
             </div>
          </div>
          <div class="card-body p-0">
             <div class="table-responsive">
-               <table class="table table-centered table-hover text-nowrap table-borderless mb-0 table-with-checkbox">
+               <table class="table table-centered table-hover text-nowrap table-borderless mb-0 table-with-checkbox" id="table-data">
                   <thead class="bg-light">
                      <tr>
                         <th>
@@ -68,7 +61,7 @@
                </table>
             </div>
          </div>
-         <div class="border-top d-md-flex justify-content-center align-items-center p-6 p-3">
+         <div class="border-top d-md-flex justify-content-center align-items-center  p-3">
             <pagination-controls (pageChange)="currentPage=$event"></pagination-controls>
          </div>
       </div>
