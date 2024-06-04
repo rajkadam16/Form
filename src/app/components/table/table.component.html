@@ -7,7 +7,7 @@
                      <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control " placeholder="Search your product" aria-label="search ">
                </div>
                <div *ngFor="let btn of excelBtnData" class="col-lg-2 col-md-4 col-12 py-3 px-3">
-                  <button (click)="exportExcel()" type="button" class="btn btn-primary">{{btn.buttonName}}</button>
+                  <button *ngIf="btn.isEnabled" (click)="exportExcel()" type="button" class="btn btn-primary">{{btn.buttonName}}</button>
                </div>
             </div>
          </div>
@@ -24,12 +24,14 @@
                            </div>
                         </th>
                         <th *ngFor="let section of tableSectionData">
-                           {{ section.tableSec }}
+                       <div *ngIf="section.isEnabled">
+                        {{ section.tableSec }}
+                       </div>
                         </th>
                      </tr>
                   </thead>
-                  <tbody>
-                     <tr *ngFor="let table of tableInfoData|filter:searchtext | paginate:{itemsPerPage:pageSize,currentPage} ">
+                  <tbody *ngFor="let table of tableInfoData|filter:searchtext | paginate:{itemsPerPage:pageSize,currentPage} ">
+                     <tr *ngIf="table.isEnabled">
                         <td>
                            <div class="form-check">
                               <input class="form-check-input" type="checkbox" [(ngModel)]="table.selected"

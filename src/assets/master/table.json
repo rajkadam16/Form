@@ -1,24 +1,31 @@
 {
   "tableSection":[
     {
+      "isEnabled": true,
       "tableSec":"Image"
     },
     {
+      "isEnabled": true,
       "tableSec":"Order Name"
     },
     {
+      "isEnabled": true,
       "tableSec":"Customer"
     },
     {
+      "isEnabled": true,
       "tableSec":"Date & Time"
     },
-    {
+    {    
+      "isEnabled": true,
       "tableSec":"Payment"
     },
     {
+      "isEnabled": true,
       "tableSec":"Status"
     },
     {
+      "isEnabled": true,
       "tableSec":"Amount"
     }
   ],
@@ -146,6 +153,7 @@
   ],
   "excelBtn": [
     {
+      "isEnabled": true,
       "buttonName":"Get Data"
     }
   ]
