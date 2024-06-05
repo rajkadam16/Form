@@ -10,4 +10,5 @@ export const SystemConfig = {
     imagegallaryJson: "assets/master/imagegallary.json",
     featuretteJson: "assets/master/featurette.json",
     tableJson: "assets/master/table.json",
+    listgroupJson: "assets/master/listgroup.json",
 }
