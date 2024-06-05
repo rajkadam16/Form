@@ -14,10 +14,10 @@ export class TableComponent {
   excelBtnData: any[] = [];
   checkAll: boolean = false;
   pageSize = 5;
-  currentPage = 1
-  searchtext:any;
+  currentPage = 1;
+  searchtext: any;
 
-  constructor(private table: JsonfilereaderService ) {}
+  constructor(private table: JsonfilereaderService) {}
   ngOnInit(): void {
     this.table.parseJsonFile(SystemConfig.tableJson).subscribe((res: any) => {
       this.tableInfoData = res.tableList;
@@ -33,17 +33,15 @@ export class TableComponent {
     this.checkAll = this.tableInfoData.every((item) => item.selected);
   }
 
-fileName = "ExcelSheet.xlsx"
-exportExcel(){
-  let data = document.getElementById("table-data");
+  fileName = 'ExcelSheet.xlsx';
+  exportExcel() {
+    let data = document.getElementById('table-data');
 
-  const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(data)
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(data);
 
-  const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
 
-  XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-  XLSX.writeFile(wb,this.fileName)
-
-}
-
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    XLSX.writeFile(wb, this.fileName);
+  }
 }

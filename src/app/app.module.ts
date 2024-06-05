@@ -28,6 +28,9 @@ import { TableComponent } from './components/table/table.component';
 import { SerachComponent } from './components/serach/serach.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MediaPlayerComponent } from './components/media-player/media-player.component';
+import { NestedNavComponent } from './components/nested-nav/nested-nav.component';
+import { ListGroupComponent } from './components/list-group/list-group.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     TableComponent,
     SerachComponent,
     FilterPipe,
+    MediaPlayerComponent,
+    NestedNavComponent,
+    ListGroupComponent,
 
   ],
   imports: [
