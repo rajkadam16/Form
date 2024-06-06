@@ -1,0 +1,18 @@
+[
+    {
+        "isEnabled":true,
+      "title": "YouTube video player 1",
+      "src": "https://www.youtube.com/embed/6axfJtFWsiQ?si=SUd8wq_GodoXIujd",
+      "width": 560,
+      "height": 315
+    },
+      {
+        "isEnabled":true,
+        "title": "YouTube video player 1",
+        "src": "https://www.youtube.com/embed/DK8M-ZFjaMw?si=JSsT6Fvt-2W2TS5x",
+        "width": 560,
+        "height": 315
+      }
+
+  ]
+  

@@ -31,6 +31,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { MediaPlayerComponent } from './components/media-player/media-player.component';
 import { NestedNavComponent } from './components/nested-nav/nested-nav.component';
 import { ListGroupComponent } from './components/list-group/list-group.component';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ListGroupComponent } from './components/list-group/list-group.component
     MediaPlayerComponent,
     NestedNavComponent,
     ListGroupComponent,
+    SafeUrlPipe,
 
   ],
   imports: [
@@ -71,7 +73,6 @@ import { ListGroupComponent } from './components/list-group/list-group.component
     BrowserAnimationsModule,
     NgxPaginationModule
   ],
-
   bootstrap: [AppComponent],
 })
 export class AppModule {}
