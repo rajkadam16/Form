@@ -73,6 +73,7 @@ import { SafeUrlPipe } from './pipes/safe-url.pipe';
     BrowserAnimationsModule,
     NgxPaginationModule
   ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

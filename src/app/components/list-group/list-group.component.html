@@ -1,30 +1,22 @@
-<div class="row">
+ <div class="row">
         <div class="col-4">
           <div id="list-example" class="list-group">
-            <a class="list-group-item list-group-item-action"  [ngClass]="{'active-item': activeItem === 'item1'}"  (click)="inview(item1);onview('item1')">Item 1</a>
-            <a class="list-group-item list-group-item-action"  [ngClass]="{'active-item': activeItem === 'item2'}"  (click)="inview(item2);onview('item2')">Item 2</a>
-            <a class="list-group-item list-group-item-action"  [ngClass]="{'active-item': activeItem === 'item3'}"  (click)="inview(item3);onview('item3')">Item 3</a>
-            <a class="list-group-item list-group-item-action"  [ngClass]="{'active-item': activeItem === 'item4'}"  (click)="inview(item4);onview('item4')">Item 4</a>
+            <a *ngFor="let item of listGroupData" 
+               class="list-group-item list-group-item-action"  
+               [ngClass]="{'active-item': activeItem === item.id}"  
+               (click)="inview(item.id); onview(item.id)">
+              {{ item.title }}
+            </a>
           </div>
         </div>
-        <div class="col-8">
+        <div class="col-8" #scrollContainer>
           <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-            <h4 #item1>Item 1</h4>
-            <p>Earth, our home planet, is a vibrant tapestry of life and geological wonders. Positioned as the third planet from the Sun in the Milky Way galaxy, Earth is unique in its ability to sustain a diverse range of life forms, thanks to its perfect balance of distance from the Sun, atmosphere, and magnetic field. The planet's surface is a mosaic of continents and oceans, with approximately 71% covered by water. This abundance of water is crucial for life, influencing climate patterns and supporting a vast array of ecosystems, from the deepest ocean trenches to the highest mountain peaks.
-    
-    The Earth's atmosphere,</p>
-            <h4 #item2>Item 2</h4>
-            <p>Earth, our home planet, is a vibrant tapestry of life and geological wonders. Positioned as the third planet from the Sun in the Milky Way galaxy, Earth is unique in its ability to sustain a diverse range of life forms, thanks to its perfect balance of distance from the Sun, atmosphere, and magnetic field. The planet's surface is a mosaic of continents and oceans, with approximately 71% covered by water. This abundance of water is crucial for life, influencing climate patterns and supporting a vast array of ecosystems, from the deepest ocean trenches to the highest mountain peaks.
-    
-    The Earth's atmosphere,</p>
-            <h4 #item3>Item 3</h4>
-            <p>Earth, our home planet, is a vibrant tapestry of life and geological wonders. Positioned as the third planet from the Sun in the Milky Way galaxy, Earth is unique in its ability to sustain a diverse range of life forms, thanks to its perfect balance of distance from the Sun, atmosphere, and magnetic field. The planet's surface is a mosaic of continents and oceans, with approximately 71% covered by water. This abundance of water is crucial for life, influencing climate patterns and supporting a vast array of ecosystems, from the deepest ocean trenches to the highest mountain peaks.
-    
-    The Earth's atmosphere,</p>
-            <h4 #item4>Item 4</h4>
-            <p>Earth, our home planet, is a vibrant tapestry of life and geological wonders. Positioned as the third planet from the Sun in the Milky Way galaxy, Earth is unique in its ability to sustain a diverse range of life forms, thanks to its perfect balance of distance from the Sun, atmosphere, and magnetic field. The planet's surface is a mosaic of continents and oceans, with approximately 71% covered by water. This abundance of water is crucial for life, influencing climate patterns and supporting a vast array of ecosystems, from the deepest ocean trenches to the highest mountain peaks.
-    
-    The Earth's atmosphere,</p>
+            <div *ngFor="let item of listGroupData" [attr.id]="item.id">
+              <h4>{{ item.title }}</h4>
+              <p>{{ item.content }}</p>
+            </div>
           </div>
         </div>
-      </div>  
+      </div>
+      
+      
