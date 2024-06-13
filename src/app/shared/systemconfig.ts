@@ -12,4 +12,5 @@ export const SystemConfig = {
     tableJson: "assets/master/table.json",
     listgroupJson: "assets/master/listgroup.json",
     mediaplayerJson: "assets/master/mediaplayer.json",
+    nestednavJson: "assets/master/nestednav.json",
 }
