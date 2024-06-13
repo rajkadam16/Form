@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, MinLengthValidator, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -7,23 +8,13 @@ import { FormBuilder, FormGroup, MinLengthValidator, Validators } from '@angular
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  myForm!: FormGroup;
-  constructor(private fb: FormBuilder) {}
-  loginForm = this.fb.group({
-    email: ['',[Validators.required, Validators.email]],
-    password: ['',[Validators.required,Validators.minLength(8)]]
-  });
-
-  onSubmit(){
-    console.log(this.loginForm.value);
-    this.loginForm.reset();
-  }
-  get email() {
-    return this.loginForm.controls['email'];
-  }
-  get password() {
-    return this.loginForm.controls['password'];
-  
-  }
-
+ loginFrom :FormGroup = new FormGroup ({
+  username: new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)]),
+  password:new FormControl('',[Validators.required])
+ })
+ formValue:any;
+ onSubmit(){
+  this.formValue = this.loginFrom
+  this.loginFrom.reset();
+ }
 }

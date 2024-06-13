@@ -9,7 +9,7 @@
             </a>
           </div>
         </div>
-        <div class="col-8" #scrollContainer>
+        <div class="col-8" #scrollContainer style="height: 300px; overflow:auto; ">
           <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
             <div *ngFor="let item of listGroupData" [attr.id]="item.id">
               <h4>{{ item.title }}</h4>
