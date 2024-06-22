@@ -1,19 +1,23 @@
- <div class="row container my-5">
+<div class="row container my-5">
    <div class="col-xl-12 col-12 mb-5">
       <div class="card h-100 card-lg">
          <div class="p-6">
             <div class="row justify-content-between">
-               <div class="col-md-4 col-12  my-3 m-3">     
-                     <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control " placeholder="Search your product" aria-label="search ">
+               <div class="col-md-4 col-12 my-3 m-3">
+                  <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control"
+                     placeholder="Search your product" aria-label="search " />
                </div>
                <div *ngFor="let btn of excelBtnData" class="col-lg-2 col-md-4 col-12 py-3 px-3">
-                  <button *ngIf="btn.isEnabled" (click)="exportExcel()" type="button" class="btn btn-primary">{{btn.buttonName}}</button>
+                  <button *ngIf="btn.isEnabled" (click)="exportExcel()" type="button" class="btn btn-primary">
+                     {{ btn.buttonName }}
+                  </button>
                </div>
             </div>
          </div>
          <div class="card-body p-0">
             <div class="table-responsive">
-               <table class="table table-centered table-hover text-nowrap table-borderless mb-0 table-with-checkbox" id="table-data">
+               <table class="table table-centered table-hover text-nowrap table-borderless mb-0 table-with-checkbox"
+                  id="table-data">
                   <thead class="bg-light">
                      <tr>
                         <th>
@@ -24,13 +28,17 @@
                            </div>
                         </th>
                         <th *ngFor="let section of tableSectionData">
-                       <div *ngIf="section.isEnabled">
-                        {{ section.tableSec }}
-                       </div>
+                           <div *ngIf="section.isEnabled">
+                              {{ section.tableSec }}
+                           </div>
                         </th>
                      </tr>
                   </thead>
-                  <tbody *ngFor="let table of tableInfoData|filter:searchtext | paginate:{itemsPerPage:pageSize,currentPage} ">
+                  <tbody *ngFor="
+                let table of tableInfoData
+                  | filter : searchtext
+                  | paginate : { itemsPerPage: pageSize, currentPage }
+              ">
                      <tr *ngIf="table.isEnabled">
                         <td>
                            <div class="form-check">
@@ -56,17 +64,20 @@
                         </td>
                         <td>${{ table.price }}</td>
                         <td>
+                           <button type="button" class="btn btn-success">Add</button>
+                        </td>
+                        <td>
+                           <button type="button" class="btn btn-danger">Delete</button>
                         </td>
                      </tr>
                   </tbody>
                </table>
             </div>
          </div>
-         <div class="border-top d-md-flex justify-content-center align-items-center  p-3">
-            <pagination-controls (pageChange)="currentPage=$event"></pagination-controls>
+         <div class="border-top d-md-flex justify-content-center align-items-center p-3">
+            <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
          </div>
       </div>
    </div>
-</div> 
-
+</div>
 

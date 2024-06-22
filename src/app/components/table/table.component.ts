@@ -1,6 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { JsonfilereaderService } from 'src/app/services/jsonfilereader.service';
-import { SystemConfig } from 'src/app/shared/systemconfig';
+
 import * as XLSX from 'xlsx';
 
 @Component({
@@ -17,9 +17,9 @@ export class TableComponent {
   currentPage = 1;
   searchtext: any;
 
-  constructor(private table: JsonfilereaderService) {}
+  constructor(private http: HttpClient) {}
   ngOnInit(): void {
-    this.table.parseJsonFile(SystemConfig.tableJson).subscribe((res: any) => {
+    this.http.get('assets/master/table.json').subscribe((res: any) => {
       this.tableInfoData = res.tableList;
       this.tableSectionData = res.tableSection;
       this.excelBtnData = res.excelBtn;
